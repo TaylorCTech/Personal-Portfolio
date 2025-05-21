@@ -11,7 +11,6 @@
         <h1>Colby Taylor</h1>
         <nav id="navbar">
             <ul class="navlist__container">
-                <li class="navlist__item about"><a href="#about">About Me</a></li>
                 <li class="navlist__item projects"><a href="#projects">Projects</a></li>
                 <li class="navlist__item contact"><a href="#contact">Contact Me</a></li>
             </ul>
@@ -20,7 +19,7 @@
     <hr class="body__hr">
     <section id="about" class="about__me">
         <div class="about__card">
-            <img src="./images/Colby-1.jpg">
+            <img src="./images/Colby-1.jpg" alt="Colby Taylor" class="about__img">
             <h2>About Me</h2>
             <p>I'm a beginner in Web Development with aspirations 
             to become a certified full-stack developer.
@@ -32,16 +31,16 @@
         </div>
         <div class="about__info">
             <div class="button__section">            
-                <button class="about__btn courseBtn" onclick="coursesSection()">Courses</button>                           
-                <button class="about__btn skillsBtn" onclick="skillsSection()">Skills</button>        
+                <button class="about__btn coursesBtn active" onclick="coursesSection()">Courses</button>                           
+                <button class="about__btn skillsBtn inactive"onclick="skillsSection()">Skills</button>        
             </div>
             <hr class="about__hr">
             <section class="courses__box">
                 <ul class="course__list">
                     <li class="course__item">
                         <h3>FreeCodeCamp's Responsive Web Design Certification</h3>
-                        <p>The first of many of FreeCodeCamp's complete certifications. This one in particular
-                            focuses mainly on best practices for utilizing HTML and CSS with an intro into JavaScript.
+                        <p>The first of many FreeCodeCamp complete certifications. This one in particular
+                        focuses mainly on best practices for utilizing HTML and CSS with an intro into JavaScript.
                         </p>
                     </li>
                     <li class="course__item">
@@ -63,6 +62,56 @@
                     <div class="skills"><p>Basic JavaScript</p></div>
                 </div>
             </section>
+        </div>
+    </section>
+    <hr class="body__hr">
+    <section class="projects" id="projects">
+        <div class="projects__header">
+            <h2 class="body__title">Projects</h2>
+        </div>
+        <div class="projects__container">
+            <a rel="noopener" href="https://taylorctech.github.io/Mother-s-Day-Cards/" target="_blank" class="project__link">
+                <div class="project__card">
+                    <img src="./images/Family-Small.jpg" alt="Mother's Day Project" class="project__img">             
+                    <h3 class="project__title">Mother's Day Cards</h3>
+                    <p class="project__info">A small beginning project that I built as a gift to my mom for Mother's Day.</p>
+                </div>
+            </a>         
+            <a href="" class="project__link">
+                <div class="project__card">
+                    <img src="" alt="Project 2" class="project__img">             
+                    <h3 class="project__title">Project 2</h3>
+                    <p class="project__info">A description for the next project will be placed here.</p>
+                </div>
+            </a>         
+            <a href="" class="project__link">
+                <div class="project__card">
+                    <img src="" alt="Project 3" class="project__img">             
+                    <h3 class="project__title">Project 3</h3>
+                    <p class="project__info">A description for the next project will be placed here.</p>
+                </div>
+            </a>         
+            <a href="" class="project__link">
+                <div class="project__card">
+                    <img src="" alt="Project 4" class="project__img">             
+                    <h3 class="project__title">Project 4</h3>
+                    <p class="project__info">A description for the next project will be placed here.</p>
+                </div>
+            </a>                
+        </div>
+    </section>
+    <hr class="body__hr">
+    <section class="contact__section" id="contact">
+        <div class="contact__header">
+            <h2 class="body__title">Contact Me</h2>
+            <p>If you would like to contact me, please reach out to me via one of these options:</p>
+        </div>
+        <div class="contact__container">
+            <ul class="social__list">
+                <li class="social__item">
+                   <h4 class="social__name">Email:</h4> <p>ctaylor.aspiring@gmail.com</p>
+                </li>
+            </ul>
         </div>
     </section>
     <script src="script.js"></script>
