@@ -314,11 +314,11 @@ h1 {
 }
 
 .contact__section {
-    width: 85%;
+    width: 75rem;
     height: fit-content;
-    margin: 1.5rem auto;
+    margin: 1.5rem 5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -332,12 +332,12 @@ h1 {
 }
 
 .contact__header p {
-    width: 80%;
+    width: 35rem;
     font-size: 1.1rem;
 }
 
 .contact__container {
-    width: 25rem;
+    width: 20rem;
     height: 25rem;
     margin: auto;
     border: 0.125rem inset var(--custom-theme2);
