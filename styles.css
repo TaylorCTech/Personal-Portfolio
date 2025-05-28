@@ -13,11 +13,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    -webkit-text-fill-color: var(--text-color);
+    -webkit-text-fill-color: var(--text-color2);
 }
 
 html {
-    background-color: var(--background);
+    background-color: var(--text-color2);
 }
 
 body {
@@ -26,7 +26,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     background-color: var(--custom-theme1);
     border-radius: 1rem;
-    max-width: 85rem;
+    max-width: 80rem;
 }
 
 .body__title {
@@ -106,6 +106,7 @@ h1 {
     border-right-style: dashed;
     border-radius: 1rem 0 0 1rem;
     text-align: center;
+    position: relative;
 }
 
 .about__card h2 {
@@ -199,6 +200,7 @@ h1 {
     align-items: center;
     justify-content: space-around;
     gap: 1rem;
+    position: inherit;
 }
 
 .skills {
@@ -208,14 +210,56 @@ h1 {
     align-items: center;
     text-align: center;
     font-weight: bold;
-    width: 7rem;
-    height: 5rem;
-    background-color: var(--custom-theme1);
-    border: 0.15rem inset var(--custom-theme3);
+    padding: 0.1rem;
     border-radius: 0.5rem;
+    position: relative;
+    z-index: 2;
 }
 
-/* NEED TO GET THIS WORKING FOR ANIMATED BORDER!! (using a border property for now) */
+.skills p {
+    width: 7rem;
+    height: 4rem;
+    background-color: var(--custom-theme1);
+    border-radius: 0.8rem;
+    font-size: inherit * 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.skills p::before, .skills p::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle) ,transparent 20%, var(--custom-theme3), var(--text-color));
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 0.5rem;
+    animation: 1s spin linear infinite; 
+}
+
+@keyframes spin {
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+.skills p::before {
+    filter: blur(1.5em);
+    opacity: 0.5;
+} 
 
 .projects__container {
     width: 95%;
@@ -303,7 +347,7 @@ h1 {
 }
 
 .project__info {
-    -webkit-text-fill-color: var(--custom-theme3);
+    -webkit-text-fill-color: var(--text-color2);
     background-color: var(--background);
     border: 2px solid white;
     border-radius: 1rem;
